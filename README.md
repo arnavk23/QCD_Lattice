@@ -1,10 +1,87 @@
-# QCD Lattice Field Theory Implementation
+# Introduction to Lattice QCD - Educational Implementation
 
-This project implements comprehensive Markov Chain Monte Carlo methods for lattice field theory calculations following Creutz's methodology. All components are fully functional with extensive validation and analysis capabilities.
+## Educational Objectives
+
+This project provides a comprehensive introduction to **Lattice Quantum Chromodynamics (QCD)** for students, covering both theoretical foundations and computational implementations. The project is designed to guide students through:
+
+1. **Path Integral Formalism** - Mathematical foundations of quantum field theory
+2. **Monte Carlo Methods** - Statistical sampling techniques for quantum systems  
+3. **Markov Chain Algorithms** - Metropolis-Hastings and Hybrid Monte Carlo
+4. **Critical Slowing Down** - Understanding and mitigating computational challenges
+5. **Advanced Techniques** - Machine learning approaches and acceleration methods
+6. **Practical Applications** - Hands-on implementation of lattice field theories
+
+## Repository Structure & Research Paper
+
+This repository is organized for both educational and research purposes:
+
+- `src/` — Core simulation modules (field theory, harmonic oscillator, HMC, Metropolis, utilities)
+- `notebooks/` — Jupyter notebooks for hands-on exercises and research
+- `docs/` — Theoretical documentation and lecture notes
+- `paper/` — Academic paper summarizing the project and original research (see `paper/main.tex`)
+- `plots/` — Generated figures and visualizations
+- `demos/` — Demo scripts for running simulations
+- `tests/` — Unit tests for code validation
+
+### Original Research
+- **4D Pure Gauge Theory Implementation**: See `notebooks/gattringer_pure_gauge_4d.ipynb` and Section 4 of the paper for details on the new algorithm and results following Gattringer's approach.
+
+### How to Build the Paper
+To compile the academic paper to PDF:
+```bash
+cd paper
+pdflatex main.tex
+```
+
+### Author & Date
+Arnav Kapoor, August 13, 2025
+
+## Project Status: COMPLETE AND WORKING
+
+This educational implementation provides comprehensive Markov Chain Monte Carlo methods for lattice field theory calculations following Creutz's methodology. All components are fully functional with extensive validation and analysis capabilities.
 
 **Success Rate: 4/4 demos completed successfully**  
 **Total Plots Generated: 25 high-quality visualizations**  
 **Key Achievement: ⟨q⟩ = 0 verification successful for harmonic oscillator**
+
+## Learning Path Structure
+
+###  Phase 1: Foundations (Weeks 1-2)
+- Path integral formulation of quantum mechanics
+- Harmonic oscillator on the lattice
+- Basic Monte Carlo concepts
+
+###  Phase 2: Monte Carlo Methods (Weeks 3-4)  
+- Metropolis-Hastings algorithm
+- Statistical analysis and error estimation
+- Autocorrelation and effective sample sizes
+
+###  Phase 3: Advanced Techniques (Weeks 5-6)
+- Hybrid Monte Carlo (HMC)
+- Critical slowing down analysis
+- Acceleration methods and machine learning
+
+###  Phase 4: Applications (Weeks 7-8)
+- 1D scalar field theory
+- QED in 1+1 dimensions (Schwinger model)
+- Real physics applications
+
+## Educational Resources 
+
+### Core Documentation
+- **[Theory Guide](docs/THEORY.md)** - Comprehensive theoretical background
+- **[Exercise Manual](docs/EXERCISES.md)** - Structured learning exercises  
+- **[Critical Slowing Down](docs/CRITICAL_SLOWING_DOWN.md)** - Advanced techniques
+
+### Interactive Notebooks
+- **[Exercise 1.1](notebooks/exercise_1_1_free_particle.ipynb)** - Path integral for free particle
+- **[Exercise 2.2](notebooks/exercise_2_2_critical_slowing_down.ipynb)** - Critical slowing down in 2D Ising model
+- **Additional exercises** - Coming soon
+
+### Assessment Framework
+- **Continuous Assessment (60%)** - Weekly reports and implementations
+- **Final Project (40%)** - Original research or advanced analysis
+- **Grading Rubric** - Physics understanding, code quality, analysis, presentation
 
 ## Project Structure
 
@@ -17,7 +94,25 @@ qcd_cambridge/
 │   ├── harmonic_oscillator.py   # Quantum harmonic oscillator implementation
 │   └── utils.py                 # Analysis utilities (autocorrelation, jackknife, etc.)
 ├── tests/                       # Comprehensive test suite
-│   └── test_implementations.py  # 19 unit tests
+│   └── test_implementations.py  # 19 unit tests 
+├── docs/                        # Educational documentation
+│   ├── THEORY.md               # Theoretical foundations
+│   ├── EXERCISES.md            # Structured learning exercises
+│   └── CRITICAL_SLOWING_DOWN.md # Advanced acceleration techniques
+├── notebooks/                   # Interactive Jupyter notebooks
+│   ├── exercise_1_1_free_particle.ipynb    # Path integral basics
+│   └── exercise_2_2_critical_slowing_down.ipynb # Critical phenomena
+├── plots/                       # Generated plots and analysis
+│   ├── harmonic_oscillator/     # 8 plots
+│   ├── field_theory/           # 9 plots
+│   ├── hmc/                    # 4 plots
+│   └── metropolis/             # 4 plots
+├── demo_*.py                   # Individual demonstration scripts
+├── run_all_demos.py            # Master demo runner
+├── requirements.txt            # Python dependencies
+├── LICENSE                     # MIT License
+└── .gitignore                  # Git ignore rules
+```
 ├── notebooks/                   # Jupyter notebooks for analysis
 ├── plots/                       # Generated plots and analysis
 │   ├── harmonic_oscillator/     # 8 plots
